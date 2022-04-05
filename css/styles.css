@@ -1,0 +1,176 @@
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.title {
+  color: #1C6EA4;
+}
+
+.main {
+margin: 1rem 20rem 1rem 20rem;
+}
+
+.txtArea{
+  padding: 3px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);  
+}
+
+.radius{
+  grid-column: 3 / 4;
+  border: 3px solid rgb(73, 120, 180);
+  background-color: #eee;
+}
+
+.fig{
+  display: flex;
+  flex-direction: column; 
+  column-gap: 3;
+  align-items: center;
+  gap: 5px;
+}
+
+.sq {
+  border-spacing: 0.5rem;
+  border-collapse: collapse;
+  padding: 0.5rem;
+  background-color: #D0E4F5;
+  height: 110px;
+  width: 140px;
+}
+
+.top-left{
+  border-radius: 40px 40px 0px 40px;
+}
+
+.top-right{
+  border-radius: 40px 40px 40px 0px;
+}
+
+.bot-left{
+  border-radius: 40px 0px 40px 40px;
+}
+
+.bot-right{
+  border-radius: 0px 40px 40px 40px;
+}
+
+button, input {
+  overflow: visible;  
+}
+
+.opt{
+  width: 60px;    
+  font-size: 17px;
+  border: 2px solid #1C6EA4;
+  color: #1C6EA4;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 140px;
+  height: .5em;
+  background: #ffffff;
+  border-color: #1C6EA4;
+  border-style: solid;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: .3s;
+  transition: opacity .2s;
+}
+
+input#borderRadiusAllTheSame {
+  width: 20px !important;
+  margin: 0 !important;
+  font-size: 30px !important;
+}
+.generator8 input {
+  border: 2px solid #1c6EA4;
+  border-radius: 4px;
+  padding: 2px;
+  font-size: 20px;
+  color: #1190e4;
+  text-align: center;
+}
+.sharpCornerBL {
+  border-radius: 30px 50px 30px 0;
+}
+.verticalAlignTop {
+  vertical-align: top;
+}
+  
+  .sharpCornerTR {
+      border-radius: 30px 0 30px 50px;
+  }   
+  .sharpCornerTL {
+      border-radius: 0 30px 50px 30px;
+  }
+
+  .settingRow {
+      padding: 5px 0 0 0;
+  }
+  .settingRowLabel {
+      float: left;
+      width: 30%;
+      padding: 5px 1%;
+      text-align: right;
+  }
+
+  .settingRowInput {
+      width: 140%;
+      padding: 0px 2% 5px;
+  }
+  
+  .resetToThis {
+      display: inline-block;
+      padding: 0 5px;
+      background: #1C6EA4;
+      box-shadow: inset 0 2px 5px 1px #1C6EA4, 1px 2px 5px 1px #999;
+  }
+
+  #borderStyles > a {
+      border: 4px solid #1C6EA4;
+      cursor: pointer;
+      color: #333;
+      width: 60px;
+      background-color: #eee;
+  }
+
+  #backgroundRepeatSelect > a:hover, a.selected, #backgroundAttachmentSelect > a:hover, #borderStyles > a:hover, #borderOrOutline > a:hover, #whichBorder > a:hover {
+      background-color: #D0E4F5 !important;
+  }
+
+  #borderColor {
+      width: 100px;
+      margin-right: 20px;
+      border: 3px solid  #1C6EA4;
+      box-shadow: #73aace46 unset;
+  }
+  .wrapBorderOpacity {
+      margin-right: 20px;
+  }
+  .wrapBackgroundOpacity, .wrapBorderOpacity {
+      width: 160px;
+      display: inline-block;
+  }
+
+  #whichBorder > a {
+      display: inline-block;
+      margin: 5px 5px 1px 0;
+      cursor: pointer;
+      overflow: hidden;
+      color: #333;
+      padding: 0 8px;
+      line-height: 22px;
+      height: 25px;
+      text-align: center;
+      width: 60px;
+      background-color: #eee;
+  }

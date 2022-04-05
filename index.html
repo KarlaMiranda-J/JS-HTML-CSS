@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="css/styles.css">    
+            <title> JS/HTML/CSS </title>
+        </head>
+    
+        <body>
+        
+            <div class="d-flex justify-content-center py-3"> 
+                <h3 class="fw-bold title">Online Border Radius Generator</h3>
+            </div>
+    
+            <div class="main">
+        
+                <div class="d-flex align-items-start justify-content-between">
+
+                    <div class="sq top-left w-25 d-flex align-items-center justify-content-center">
+                        <div class="fig">                 
+                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
+                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">                
+                            <div>
+                                <input type="checkbox" class="mb-2 fw-bold p-2 rounded" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1" role="button"> All the same </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sq top-right w-25 d-flex align-items-center justify-content-center">
+                        <div class="fig">                 
+                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
+                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="txtArea">
+                    <div class="radius">
+                        <textarea id="w3review" name="w3review" rows="5" cols="25" class="border-0"> </textarea>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-end justify-content-between">
+
+                    <div class="sq bot-left w-25 d-flex align-items-center justify-content-center">
+                        <div class="fig">                 
+                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
+                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">                
+                        </div>
+                    </div>
+
+                    <div class="sq bot-right w-25 d-flex align-items-center justify-content-center">
+                        <div class="fig">                 
+                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
+                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        <footer>
+
+            <div class="settingRow d-flex justify-content-center align-items-center my-3">
+
+                <div class="settingRow d-flex align-items-center">
+
+                    <div class="settingRowLabel d-flex flex-row">
+                        <span> Width: </span>
+                        <span class="resetToThis rounded text-white ms-2" role="button" data-callfunction="refreshBorder" data-slider="borderWidth">1</span>
+                    </div>
+
+                    <div class="settingRowInput" style="max-width: 300px;">
+                        <div class="slidecontainer d-flex align-items-center">
+                            <input type="range" min="1" max="100" value="50" class="slider rounded mx-4" id="myRange">
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+
+            <div class="settingRow my-3 ms-5">
+
+                <div class="settingRow d-flex justify-content-center">
+                    <div class="settingRowLabel ms-5">
+                        <span class="ms-5">Style:</span>
+                    </div>
+
+                    <div class="settingRowInput">
+                        <div id="borderStyle">
+                            <div id="borderStyles" class="d-flex flex-row">
+                                <a style="border-style: solid;" title="solid" class="selected d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">solid</a>
+                                <a style="border-style: dotted;" title="dotted" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">dotted</a>
+                                <a style="border-style: dashed;" title="dashed" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">dashed</a>
+                                <a style="border-style: double;" title="double" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">double</a>
+                                <a style="border-style: groove;" title="groove" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">groove</a>
+                                <a style="border-style: ridge;" title="ridge" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">ridge</a>
+                                <a style="border-style: inset;" title="inset" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">inset</a>
+                                <a style="border-style: outset;" title="outset" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">outset</a>
+                                <a style="border-style: hidden;" title="hidden" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">hidden</a>
+                                <a style="border-style: none;" title="none" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">none</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="settingRow align-self-center ms-5">
+
+                <div class="settingRow ms-5">
+                
+                    <div class="settingRowLabel ms-5">
+                        <span>Color:</span>
+                    </div>
+
+                    <div class="settingRowInput">
+                        <input class="jscolor jscolor-active" id="borderColor" value="1C6EA4" />
+                        <div class="wrapBorderOpacity">
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="50" class="slider rounded" id="myRange">
+                            </div>
+                        </div>
+                        <span class="resetToThis rounded text-white mb-4" role="button" data-callfunction="refreshBorder" data-slider="borderColorOpacity">1</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="settingRow d-flex justify-content-center align-self-center">
+
+                <div class="settingRow d-flex justify-content-center align-items-center">
+                    <div class="settingRowLabel">
+                        Position:
+                    </div>
+                    <div class="settingRowInput fw-bold">
+                        <div id="whichBorder" class="d-flex flex-row">
+                            <a class="selected d-flex justify-content-around align-items-center text-decoration-none me-3" title="border" style="border: 4px solid #1C6EA4;">All</a>
+                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-top" style="border-top: 4px solid #1C6EA4;">Top</a>
+                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-right" style="border-right: 4px solid #1C6EA4;">Right</a>
+                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-bottom" style="border-bottom: 4px solid #1C6EA4;">Bottom</a>
+                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-left" style="border-left: 4px solid #1C6EA4;">Left</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    
+        </footer>  
+        <script src="js/main.js"></script>
+    </body>
+</html>
