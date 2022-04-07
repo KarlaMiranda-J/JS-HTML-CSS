@@ -24,43 +24,41 @@
 
                     <div class="sq top-left w-25 d-flex align-items-center justify-content-center">
                         <div class="fig">                 
-                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
-                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">                
+                            <input id="inputLT" class="inputNum fw-bold p-1 rounded text-center" value="0" min="0" max="40" type="number">
+                            <input type="range" id="radLT" class="slider" min="0" max="40">                
                             <div>
-                                <input type="checkbox" class="mb-2 fw-bold p-2 rounded" id="vehicle1" name="vehicle1" value="Bike">
-                                <label for="vehicle1" role="button"> All the same </label>
+                                <input type="checkbox" id="allRad" value="Bike">
+                                <label for="allRad"> All the same </label>
                             </div>
                         </div>
                     </div>
 
                     <div class="sq top-right w-25 d-flex align-items-center justify-content-center">
                         <div class="fig">                 
-                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
-                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">
+                            <input id="inputRT" class="inputNum fw-bold p-1 rounded text-center" value="0" min="0" max="40" type="number">
+                            <input type="range" id="radRT" class="slider" min="0" max="40">
                         </div>
                     </div>
 
                 </div>
 
                 <div class="txtArea">
-                    <div class="radius">
-                        <textarea id="w3review" name="w3review" rows="5" cols="25" class="border-0"> </textarea>
-                    </div>
+                    <textarea class="radius" id="taReview" name="taReview" rows="4" cols="25"> </textarea>
                 </div>
 
                 <div class="d-flex align-items-end justify-content-between">
 
                     <div class="sq bot-left w-25 d-flex align-items-center justify-content-center">
                         <div class="fig">                 
-                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
-                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">                
+                            <input id="inputLB" class="inputNum mb-2 fw-bold p-2 rounded text-center" value="0" min="0" max="40" type="number">
+                            <input type="range" id="radLB" class="slider rounded" name="vol" min="0" max="40">                
                         </div>
                     </div>
 
                     <div class="sq bot-right w-25 d-flex align-items-center justify-content-center">
                         <div class="fig">                 
-                            <input id="" class="opt mb-2 fw-bold p-2 rounded text-center" value="0" min="0" type="number">
-                            <input type="range" id="vol" class="slider rounded" name="vol" min="0" max="50">
+                            <input id="inputRB" class="inputNum mb-2 fw-bold p-2 rounded text-center" value="0" min="0" max="40" type="number">
+                            <input type="range" id="radRB" class="slider rounded" name="vol" min="0" max="40">
                         </div>
                     </div>
 
@@ -76,12 +74,13 @@
 
                     <div class="settingRowLabel d-flex flex-row">
                         <span> Width: </span>
-                        <span class="resetToThis rounded text-white ms-2" role="button" data-callfunction="refreshBorder" data-slider="borderWidth">1</span>
+                        <span id="resButton" class="resetToThis rounded text-white ms-2" role="button" data-callfunction="refreshBorder" data-slider="borderWidth">1</span>
                     </div>
 
                     <div class="settingRowInput" style="max-width: 300px;">
                         <div class="slidecontainer d-flex align-items-center">
-                            <input type="range" min="1" max="100" value="50" class="slider rounded mx-4" id="myRange">
+                            <input type="range" min="0" max="30" value="5" class="slider rounded mx-4" id="widthBorder">
+                            <input id="inputWidth" class="inputNum mb-2 fw-bold p-1 rounded text-center" value="0" min="0" max="30" type="number">
                         </div>
                     </div>
 
@@ -99,16 +98,16 @@
                     <div class="settingRowInput">
                         <div id="borderStyle">
                             <div id="borderStyles" class="d-flex flex-row">
-                                <a style="border-style: solid;" title="solid" class="selected d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">solid</a>
-                                <a style="border-style: dotted;" title="dotted" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">dotted</a>
-                                <a style="border-style: dashed;" title="dashed" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">dashed</a>
-                                <a style="border-style: double;" title="double" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">double</a>
-                                <a style="border-style: groove;" title="groove" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">groove</a>
-                                <a style="border-style: ridge;" title="ridge" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">ridge</a>
-                                <a style="border-style: inset;" title="inset" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">inset</a>
-                                <a style="border-style: outset;" title="outset" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">outset</a>
-                                <a style="border-style: hidden;" title="hidden" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">hidden</a>
-                                <a style="border-style: none;" title="none" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">none</a>
+                                <a id="borderSolid" style="border-style: solid;" title="solid" class="selected d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">solid</a>
+                                <a id="borderDotted" style="border-style: dotted;" title="dotted" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">dotted</a>
+                                <a id="borderDashed" style="border-style: dashed;" title="dashed" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">dashed</a>
+                                <a id="borderDouble" style="border-style: double;" title="double" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">double</a>
+                                <a id="borderGroove" style="border-style: groove;" title="groove" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">groove</a>
+                                <a id="borderRidge" style="border-style: ridge;" title="ridge" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">ridge</a>
+                                <a id="borderInset" style="border-style: inset;" title="inset" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">inset</a>
+                                <a id="borderOutset" style="border-style: outset;" title="outset" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">outset</a>
+                                <a id="borderHidden" style="border-style: hidden;" title="hidden" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">hidden</a>
+                                <a id="borderNone" style="border-style: none;" title="none" class="d-flex justify-content-center align-items-center me-3 text-decoration-none fw-bold">none</a>
                             </div>
                         </div>
                     </div>
@@ -119,20 +118,21 @@
 
             <div class="settingRow align-self-center ms-5">
 
-                <div class="settingRow ms-5">
+                <div class="settingRow ms-4">
                 
-                    <div class="settingRowLabel ms-5">
+                    <div class="settingRowLabel">
                         <span>Color:</span>
                     </div>
 
                     <div class="settingRowInput">
-                        <input class="jscolor jscolor-active" id="borderColor" value="" />
+                        <input type="color" class="jscolor jscolor-active" id="borderColor" value="#4978B4" />
                         <div class="wrapBorderOpacity">
                             <div class="slidecontainer">
-                                <input type="range" min="1" max="100" value="50" class="slider rounded" id="myRange">
+                                <input type="range" min="0" max="100" value="50" class="slider2" id="alphaBorder">
                             </div>
                         </div>
-                        <span class="resetToThis rounded text-white mb-4" role="button" data-callfunction="refreshBorder" data-slider="borderColorOpacity">1</span>
+                        <span id="resButCol" class="resetToThis rounded text-white mx-4 mb-4" role="button" data-callfunction="refreshBorder" data-slider="borderColorOpacity">1</span>
+                        <input id="inputAlpha" class="inputNum mb-2 fw-bold p-1 rounded text-center" value="0" min="0" max="100" type="number">
                     </div>
 
                 </div>
@@ -147,11 +147,11 @@
                     </div>
                     <div class="settingRowInput fw-bold">
                         <div id="whichBorder" class="d-flex flex-row">
-                            <a class="selected d-flex justify-content-around align-items-center text-decoration-none me-3" title="border" style="border: 4px solid #1C6EA4;">All</a>
-                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-top" style="border-top: 4px solid #1C6EA4;">Top</a>
-                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-right" style="border-right: 4px solid #1C6EA4;">Right</a>
-                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-bottom" style="border-bottom: 4px solid #1C6EA4;">Bottom</a>
-                            <a class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-left" style="border-left: 4px solid #1C6EA4;">Left</a>
+                            <a id="borderAll" class="selected d-flex justify-content-around align-items-center text-decoration-none me-3" title="border" style="border: 4px solid #1C6EA4;">All</a>
+                            <a id="borderTop" class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-top" style="border-top: 4px solid #1C6EA4;">Top</a>
+                            <a id="borderRight" class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-right" style="border-right: 4px solid #1C6EA4;">Right</a>
+                            <a id="borderBottom" class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-bottom" style="border-bottom: 4px solid #1C6EA4;">Bottom</a>
+                            <a id="borderLeft" class="d-flex justify-content-around align-items-center text-decoration-none me-3" title="border-left" style="border-left: 4px solid #1C6EA4;">Left</a>
                         </div>
                     </div>
                 </div>
